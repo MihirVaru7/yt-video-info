@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Info Viewer</title>
+    <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body class="bg-gray-900 min-h-screen p-4">
+    <div class="max-w-6xl mx-auto">
+        <div class="flex items-center gap-4 mb-8">
+            <div class="text-red-500 text-4xl">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+            </div>
+            <h1 class="text-4xl font-bold gradient-text">Video Info Viewer</h1>
+        </div>
+
+        <div class="relative">
+            <input 
+                type="text" 
+                id="urlInput"
+                placeholder="Enter YouTube URL" 
+                class="w-full bg-gray-800 text-white px-4 py-3 rounded-lg pr-32 focus:ring-2 focus:ring-purple-500 focus:outline-none"
+            >
+            <button 
+                id="analyzeBtn"
+                class="analyzer-btn absolute right-2 top-1/2 -translate-y-1/2 px-6 py-2 text-white rounded-lg"
+            >
+                Analyze
+            </button>
+        </div>
+
+        <div id="result"></div>
+        <div id="error" class="hidden text-red-500 mt-4 p-4 bg-red-900/50 rounded-lg"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
